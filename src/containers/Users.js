@@ -1,17 +1,19 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { addUser } from '../actions/users';
+import { addUser, sortUsersBy } from '../actions/users';
 
 import Users from '../components/Users';
 
 const mapStateToProps = (state) => ({
-    users: state.users
+    users: state.users.data.sort(
+        (userA, userB) => userA[state.users.sortBy].localeCompare(userB[state.users.sortBy]))
 });
 
 const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators({
-        addUser
+        addUser,
+        sortUsersBy
     }, dispatch)
 });
 

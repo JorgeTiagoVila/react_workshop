@@ -6,14 +6,18 @@ const Table = (props) =>
     <table>
         <thead>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th onClick={() => props.onChangeSort('firstName')}>
+                First Name
+            </th>
+            <th onClick={() => props.onChangeSort('lastName')}>
+                Last Name
+            </th>
         </tr>
         </thead>
         <tbody>
         {
             props.users.map((user, index) =>
-                <TableRow key={index} {...user} />
+                <TableRow key={user.id} {...user} />
             )
         }
         </tbody>
