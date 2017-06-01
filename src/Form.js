@@ -10,6 +10,11 @@ class Form extends Component {
         event.preventDefault();
 
         alert(`Hello ${this.state.firstName} ${this.state.lastName}!`);
+
+        this.setState({
+            firstName: '',
+            lastName: ''
+        });
     };
 
     render() {
