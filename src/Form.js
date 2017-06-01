@@ -15,6 +15,8 @@ class Form extends Component {
             firstName: '',
             lastName: ''
         });
+
+        this.props.onSubmit(this.state.firstName, this.state.lastName);
     };
 
     render() {
