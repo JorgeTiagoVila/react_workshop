@@ -6,9 +6,15 @@ class Form extends Component {
         lastName: ''
     };
 
+    handleSubmit(event) {
+        event.preventDefault();
+
+        alert(`Hello ${this.state.firstName} ${this.state.lastName}!`);
+    }
+
     render() {
         return (
-            <form onSubmit={() => alert(`Hello ${this.state.firstName} ${this.state.lastName}!`)}>
+            <form onSubmit={this.handleSubmit}>
                 <input type="text"
                        placeholder="First Name"
                        value={this.state.firstName}
