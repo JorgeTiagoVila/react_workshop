@@ -6,11 +6,11 @@ class Form extends Component {
         lastName: ''
     };
 
-    handleSubmit(event) {
+    handleSubmit = (event) => {
         event.preventDefault();
 
         alert(`Hello ${this.state.firstName} ${this.state.lastName}!`);
-    }
+    };
 
     render() {
         return (
