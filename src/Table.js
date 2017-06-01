@@ -15,7 +15,7 @@ class Table extends Component {
                 <tbody>
                 {
                     this.props.users.map((user, index) =>
-                        <TableRow key={index} user={user} />
+                        <TableRow key={index} {...user} />
                     )
                 }
                 </tbody>

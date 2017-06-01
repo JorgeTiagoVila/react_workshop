@@ -4,8 +4,8 @@ class TableRow extends Component {
     render() {
         return (
             <tr>
-                <td>{this.props.user.firstName}</td>
-                <td>{this.props.user.lastName}</td>
+                <td>{this.props.firstName}</td>
+                <td>{this.props.lastName}</td>
             </tr>
 
         );
