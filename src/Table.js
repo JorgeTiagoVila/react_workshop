@@ -12,8 +12,8 @@ class Table extends Component {
                 </thead>
                 <tbody>
                 {
-                    this.props.users.map((user) => (
-                        <tr>
+                    this.props.users.map((user, index) => (
+                        <tr key={index}>
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
                         </tr>
