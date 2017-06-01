@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import TableRow from './TableRow';
+
 class Table extends Component {
     render() {
         return (
@@ -12,12 +14,9 @@ class Table extends Component {
                 </thead>
                 <tbody>
                 {
-                    this.props.users.map((user, index) => (
-                        <tr key={index}>
-                            <td>{user.firstName}</td>
-                            <td>{user.lastName}</td>
-                        </tr>
-                    ))
+                    this.props.users.map((user, index) =>
+                        <TableRow key={index} user={user} />
+                    )
                 }
                 </tbody>
             </table>
