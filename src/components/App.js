@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 import reducers from '../reducers';
 
-import Users from "./Users";
+import Users from "../containers/Users";
 
 import logo from '../logo.svg';
 import './App.css';

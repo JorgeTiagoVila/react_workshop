@@ -1,35 +1,12 @@
-import React, { Component } from 'react';
-
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-
-import { addUser } from '../actions/users';
+import React from 'react';
 
 import Form from './Form';
 import Table from './Table';
 
-class Users extends Component {
+const Users = (props) =>
+    <div>
+        <Form onSubmit={props.actions.addUser} />
+        <Table users={props.users} />
+    </div>;
 
-    render() {
-        return (
-            <div>
-                <Form onSubmit={this.props.actions.addUser} />
-                <Table users={this.props.users} />
-            </div>
-        );
-    }
-}
-
-const mapStateToProps = (state) => ({
-    users: state.users
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators({
-        addUser
-    }, dispatch)
-});
-
-const UsersContainer = connect(mapStateToProps, mapDispatchToProps)(Users);
-
-export default UsersContainer;
+export default Users;
