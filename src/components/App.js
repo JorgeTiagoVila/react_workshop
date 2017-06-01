@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reducers from '../reducers';
 
@@ -12,7 +13,7 @@ import './App.css';
 
 class App extends Component {
 
-    store = createStore(reducers);
+    store = createStore(reducers, composeWithDevTools());
 
     render() {
         return (
