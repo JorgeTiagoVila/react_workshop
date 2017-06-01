@@ -9,8 +9,6 @@ class Form extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        alert(`Hello ${this.state.firstName} ${this.state.lastName}!`);
-
         this.setState({
             firstName: '',
             lastName: ''
