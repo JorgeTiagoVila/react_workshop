@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 
 class Table extends Component {
-    state = {
-        firstName: 'John',
-        lastName: 'Doe'
-    };
-
     render() {
         return (
             <table>
@@ -17,8 +12,8 @@ class Table extends Component {
                 </thead>
                 <tbody>
                 <tr>
-                    <td>{this.state.firstName}</td>
-                    <td>{this.state.lastName}</td>
+                    <td>{this.props.firstName}</td>
+                    <td>{this.props.lastName}</td>
                 </tr>
                 </tbody>
             </table>

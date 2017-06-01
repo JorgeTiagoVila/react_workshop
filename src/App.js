@@ -28,7 +28,10 @@ class App extends Component {
                     <h2>Welcome to React</h2>
                 </div>
                 <Form onSubmit={this.handleSubmit} />
-                <Table />
+                <Table
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}
+                />
             </div>
         );
     }
