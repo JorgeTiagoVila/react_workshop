@@ -8,7 +8,7 @@ class Form extends Component {
 
     render() {
         return (
-            <form>
+            <form onSubmit={() => alert(`Hello ${this.state.firstName} ${this.state.lastName}!`)}>
                 <input type="text"
                        placeholder="First Name"
                        value={this.state.firstName}
@@ -19,7 +19,8 @@ class Form extends Component {
                        value={this.state.lastName}
                        onChange={(event) => this.setState({ lastName: event.target.value })}
                 />
-                <input type="submit" />
+                <input type="submit"
+                />
             </form>
         );
     }
