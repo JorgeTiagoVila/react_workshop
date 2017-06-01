@@ -9,14 +9,17 @@ import './App.css';
 class App extends Component {
 
     state = {
-        firstName: '',
-        lastName: ''
+        users: []
     };
 
     handleSubmit = (firstName, lastName) => {
-        this.setState({
-            firstName,
-            lastName
+        this.setState((state) => {
+            state.users.push({
+                firstName,
+                lastName
+            });
+
+            return state;
         });
     };
 
@@ -28,10 +31,7 @@ class App extends Component {
                     <h2>Welcome to React</h2>
                 </div>
                 <Form onSubmit={this.handleSubmit} />
-                <Table
-                    firstName={this.state.firstName}
-                    lastName={this.state.lastName}
-                />
+                <Table users={this.state.users} />
             </div>
         );
     }

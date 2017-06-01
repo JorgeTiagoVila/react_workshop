@@ -11,10 +11,14 @@ class Table extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>{this.props.firstName}</td>
-                    <td>{this.props.lastName}</td>
-                </tr>
+                {
+                    this.props.users.map((user) => (
+                        <tr>
+                            <td>{user.firstName}</td>
+                            <td>{user.lastName}</td>
+                        </tr>
+                    ))
+                }
                 </tbody>
             </table>
         );
