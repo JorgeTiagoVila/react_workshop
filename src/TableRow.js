@@ -1,15 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TableRow extends Component {
-    render() {
-        return (
-            <tr>
-                <td>{this.props.firstName}</td>
-                <td>{this.props.lastName}</td>
-            </tr>
-
-        );
-    }
-}
+const TableRow = (props) =>
+    <tr>
+        <td>{props.firstName}</td>
+        <td>{props.lastName}</td>
+    </tr>;
 
 export default TableRow;
