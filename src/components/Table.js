@@ -3,13 +3,13 @@ import React from 'react';
 import TableRow from './TableRow';
 
 const Table = (props) =>
-    <table>
+    <table style={{ borderCollapse: 'collapse', border: '1px solid black' }}>
         <thead>
         <tr>
-            <th onClick={() => props.onChangeSort('firstName')}>
+            <th style={{ border: '1px solid black', cursor: 'pointer' }} onClick={() => props.onChangeSort('firstName')}>
                 First Name
             </th>
-            <th onClick={() => props.onChangeSort('lastName')}>
+            <th style={{ border: '1px solid black', cursor: 'pointer' }} onClick={() => props.onChangeSort('lastName')}>
                 Last Name
             </th>
         </tr>

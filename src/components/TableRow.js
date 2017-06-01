@@ -2,8 +2,8 @@ import React from 'react';
 
 const TableRow = (props) =>
     <tr>
-        <td>{props.firstName}</td>
-        <td>{props.lastName}</td>
+        <td style={{ border: '1px solid black' }}>{props.firstName}</td>
+        <td style={{ border: '1px solid black' }}>{props.lastName}</td>
     </tr>;
 
 export default TableRow;
